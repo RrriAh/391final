@@ -1,0 +1,15 @@
+type Input {
+    id: ID!
+    title: String!
+    content: String!
+}
+
+type Mutation {
+    addInput(title: String!, content: String!): Input!
+    updateInput(id: ID!, title: String!, content: String!): Input!
+    deleteInput(id: ID!): Input!
+}
+
+type Query {
+    inputs: [Input]
+}
