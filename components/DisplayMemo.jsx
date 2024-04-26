@@ -1,30 +1,7 @@
 import React from 'react';
 import { gql, useQuery } from '@apollo/client';
-import styled from "styled-components";
 
-const Title = styled.h1`
-    font-family: "Book Antiqua",serif;
-`;
 
-const Box = styled.div`
-    padding: 1vmin;
-    display: flex;
-    div{
-        background-color: white;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: 1% 2%;
-        padding: 1vmin;
-        height: 200px;
-        width: 300px;
-        overflow-y: auto;
-        border-radius: 3px;
-        border: darkgray 3px solid;
-        h3{
-            text-transform:uppercase;
-        }
-    }
-`;
 
 const GET_INPUTS = gql`
     query GetInputs {
@@ -44,15 +21,28 @@ export default function InputDisplay() {
 
     return (
         <div>
-            <Title>Memos</Title>
-            <Box>
+            <h1>Memos</h1>
+            <br/>
+            <div style={{
+                padding: "1vmin", display: "flex", flexDirection: "row",
+                flexWrap: "wrap"
+            }}>
                 {data.inputs.map(input => (
-                    <div key={input.id}>
-                        <h3>{input.title}</h3>
+                    <div style={{
+                        backgroundColor: "white",
+                        margin: "1% 2%",
+                        padding: "1vmin",
+                        height: "200px",
+                        width: "300px",
+                        overflowY: "auto",
+                        borderRadius: "3px",
+                        border: "3px solid darkgray"
+                    }} key={input.id}>
+                        <h3 style={{textTransform: "uppercase"}}>{input.title}</h3>
                         <p>{input.content}</p>
                     </div>
                 ))}
-            </Box>
+            </div>
         </div>
     );
 }
