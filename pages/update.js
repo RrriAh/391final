@@ -17,7 +17,7 @@ export default function Update() {
             </Head>
             <Header/>
             <main className={`${styles.main} `}>
-                <h2>Update Memo Wall</h2>
+
                 <ApolloProvider client={client}>
                     <InputMemo/>
                 </ApolloProvider>

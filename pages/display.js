@@ -17,7 +17,6 @@ export default function Display() {
             </Head>
             <Header/>
             <main className={`${styles.main} `}>
-                <h2>Memos</h2>
                 <ApolloProvider client={client}>
                     <DisplayMemo/>
                 </ApolloProvider>
