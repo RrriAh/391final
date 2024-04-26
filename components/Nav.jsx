@@ -10,12 +10,7 @@ export default function Nav(){
                 <ul style={{ width: "100%", display: "flex", justifyContent: "space-between", listStyleType: "none" }}>
                     <li><Link href="/update">Update Memo</Link></li>
                     <li>
-                        <a href="/display" onClick={() => {
-                            window.location.reload();
-                            window.location.href = "/display";
-                        }}>
-                            Display Memo
-                        </a>
+                        <Link href="/display">Display Memo</Link>
                     </li>
                 </ul>
             </nav>

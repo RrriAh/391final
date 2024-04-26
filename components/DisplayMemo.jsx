@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { gql, useQuery } from '@apollo/client';
-
-
 
 const GET_INPUTS = gql`
     query GetInputs {
@@ -14,15 +12,14 @@ const GET_INPUTS = gql`
 `;
 
 export default function InputDisplay() {
-    const { loading, error, data } = useQuery(GET_INPUTS);
+    const { loading, error, data } = useQuery(GET_INPUTS, { pollInterval: 500 });
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
 
     return (
         <div>
-            <h1>Memos</h1>
-            <br/>
+            <h1 style={{ textAlign: "center", fontFamily: "Book Antiqua,serif" }}>Memos</h1>
             <div style={{
                 padding: "1vmin", display: "flex", flexDirection: "row",
                 flexWrap: "wrap"
@@ -38,7 +35,7 @@ export default function InputDisplay() {
                         borderRadius: "3px",
                         border: "3px solid darkgray"
                     }} key={input.id}>
-                        <h3 style={{textTransform: "uppercase"}}>{input.title}</h3>
+                        <h3 style={{ textTransform: "uppercase" }}>{input.title}</h3>
                         <p>{input.content}</p>
                     </div>
                 ))}

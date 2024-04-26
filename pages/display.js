@@ -2,9 +2,9 @@ import React from 'react';
 import client from '../apolloClient';
 import {ApolloProvider} from '@apollo/client';
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
 import DisplayMemo from '../components/DisplayMemo';
 import Header from "@/components/Nav";
+import styles from "../styles/Home.module.css";
 
 export default function Display() {
     return (
