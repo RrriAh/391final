@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import React from "react";
 import Header from "../components/Nav";
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -16,7 +17,9 @@ export default function Home() {
       </Head>
       <Header/>
       <main className={`${styles.main} `}>
-
+        <Link href="/calculator" className={styles.link}>
+          Go to Calculator
+        </Link>
       </main>
     </>
   );
