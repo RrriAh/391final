@@ -1,24 +1,6 @@
 import React, { useState } from 'react';
 import { gql, useMutation } from '@apollo/client';
-import styled from 'styled-components';
 
-const MyDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    h1{
-      font-family: "Book Antiqua",serif;  
-    }
-    input{
-        padding: 1vmin;
-        margin: 1vmin 0;
-    }
-    textarea{
-        padding: 1vmin;
-        width: 300px;
-        height: 200px;
-    }
-    
-`;
 
 const ADD_INPUT = gql`
     mutation AddInput($title:String!,$content: String!) {
