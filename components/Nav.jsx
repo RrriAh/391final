@@ -4,9 +4,13 @@ import styled from 'styled-components';
 
 const Header = styled.div`
     height: 20%;
-    background-color: cadetblue;
+    background-color: red;
     text-align: center;
 `;
+const Title= styled.h1`
+    color: white;
+    font-family: Roboto;
+`
 const MyNav = styled.nav`
     display: flex;
     background-color: gray;
@@ -17,10 +21,11 @@ const MyNav = styled.nav`
 export default function Nav(){
     return(
         <Header>
-            <h1> Memo</h1>
+            <Title> Cool School Tools</Title>
             <MyNav>
                 <Link href="/update">Update Memo</Link>
                 <Link href="/display">Display Memo</Link>
+                <Link href="/calculator">Calculator</Link>
             </MyNav>
         </Header>
     )

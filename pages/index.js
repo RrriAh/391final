@@ -17,9 +17,7 @@ export default function Home() {
       </Head>
       <Header/>
       <main className={`${styles.main} `}>
-        <Link href="/calculator" className={styles.link}>
-          Go to Calculator
-        </Link>
+     
       </main>
     </>
   );
