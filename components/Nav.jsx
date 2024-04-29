@@ -10,7 +10,7 @@ export default function Nav(){
                 <ul style={{ width: "100%", display: "flex", justifyContent: "space-between", listStyleType: "none" }}>
                     <li><Link href="/update">Update Memo</Link></li>
                     <li><Link href="/display">Display Memo</Link></li>
-                    <li>Calculator</li>
+                    <li><Link href="/calculator">Calculator</Link></li>
                 </ul>
             </nav>
         </div>
