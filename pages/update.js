@@ -2,10 +2,8 @@ import React from 'react';
 import client from '../apolloClient';
 import {ApolloProvider} from '@apollo/client';
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
 import InputMemo from '../components/InputMemo';
 import Header from "@/components/Nav";
-
 export default function Update() {
     return (
         <>
@@ -16,8 +14,12 @@ export default function Update() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header/>
-            <main className={`${styles.main} `}>
-                <h2>Update Memo Wall</h2>
+            <main style={{
+                display: "flex", flexDirection: "column", justifyContent: "space-between",
+                alignItems: "center",
+                padding: "6rem",
+                minHeight: "100vh"
+            }}>
                 <ApolloProvider client={client}>
                     <InputMemo/>
                 </ApolloProvider>
