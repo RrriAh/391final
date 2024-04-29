@@ -4,7 +4,6 @@ import {ApolloProvider} from '@apollo/client';
 import Head from "next/head";
 import DisplayMemo from '../components/DisplayMemo';
 import Header from "@/components/Nav";
-import styles from "../styles/Home.module.css";
 
 export default function Display() {
     return (
@@ -16,7 +15,10 @@ export default function Display() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header/>
-            <main className={`${styles.main} `}>
+            <main style={{ display: "flex", flexDirection: "column", justifyContent: "space-between",
+                alignItems: "center",
+                padding: "6rem",
+                minHeight: "100vh"}}>
                 <ApolloProvider client={client}>
                     <DisplayMemo/>
                 </ApolloProvider>

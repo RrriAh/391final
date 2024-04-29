@@ -4,7 +4,6 @@ import {ApolloProvider} from '@apollo/client';
 import Head from "next/head";
 import InputMemo from '../components/InputMemo';
 import Header from "@/components/Nav";
-import styles from "../styles/Home.module.css";
 export default function Update() {
     return (
         <>
@@ -15,8 +14,12 @@ export default function Update() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header/>
-            <main className={`${styles.main} `}>
-
+            <main style={{
+                display: "flex", flexDirection: "column", justifyContent: "space-between",
+                alignItems: "center",
+                padding: "6rem",
+                minHeight: "100vh"
+            }}>
                 <ApolloProvider client={client}>
                     <InputMemo/>
                 </ApolloProvider>
