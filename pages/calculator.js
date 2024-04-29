@@ -36,9 +36,10 @@ const CalculatorButton = styled.button`
   height: 50px;
   font-size: 20px;
   margin: 1%;
-  background-color: #grey;
+  background-color: #6495EDFF;
   border: none;
   border-radius: 5px;
+  color: white;
 
   &:hover {
     background-color: #e0e0e0;
