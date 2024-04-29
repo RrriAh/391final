@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from 'react';
-
+// made by Yu
+// using Next/Link to create nav bar.
 export default function Nav(){
     return(
         <div style={{backgroundColor: "#6495EDFF", textAlign: "center", textTransform: "uppercase"}}>

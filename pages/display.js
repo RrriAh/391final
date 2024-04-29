@@ -5,6 +5,10 @@ import Head from "next/head";
 import DisplayMemo from '../components/DisplayMemo';
 import Header from "@/components/Nav";
 
+// made by Yu Han
+// It utilizes ApolloProvider to provide access to the Apollo client
+// for fetching data through GraphQL. The memo data is fetched and
+// displayed using the DisplayMemo component.
 export default function Display() {
     return (
         <>

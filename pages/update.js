@@ -4,6 +4,12 @@ import {ApolloProvider} from '@apollo/client';
 import Head from "next/head";
 import InputMemo from '../components/InputMemo';
 import Header from "@/components/Nav";
+
+// made by Yu Han
+// This page renders the main update page for memos. It utilizes ApolloProvider
+// to provide access to the Apollo client for updating data through GraphQL. The InputMemo
+// component is used to input and submit memo updates.
+
 export default function Update() {
     return (
         <>
